@@ -1,4 +1,4 @@
-import style from '../../styles/NFTDisplay.module.css'
+import style from '../../styles/gate/NFTDisplay.module.css'
 
 const NFTDisplay = () => {
   return (

@@ -1,4 +1,4 @@
-import style from '../../styles/Login.module.css'
+import style from '../../styles/home/Login.module.css'
 import { useMetamask } from '@thirdweb-dev/react'
 
 const Login = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import requests from '../../requests'
 import axios from '../../axios'
-import style from '../../styles/Hero.module.css'
+import style from '../../styles/home/Hero.module.css'
 
 const posterBaseUrl = 'http://image.tmdb.org/t/p/original'
 

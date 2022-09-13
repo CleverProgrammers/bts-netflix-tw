@@ -1,12 +1,12 @@
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import Header from '../components/gate/Header'
+import Hero from '../components/gate/Hero'
 import NFTDisplay from '../components/gate/NFTDisplay'
-import style from '../styles/NFTGate.module.css'
+import style from '../styles/gate/Gate.module.css'
 
 const Gate = () => {
-git  const hasNft = false
+  const hasNft = false
   const router = useRouter()
 
   useEffect(() => {
@@ -19,18 +19,16 @@ git  const hasNft = false
     <div className={style.wrapper}>
       <div className={style.container}>
         <section className={style.infoSection}>
-          <div className={style.logoContainer}>
-            <Header />
-          </div>
+          <Header />
+
           <div className={style.mobileDisplaySection}>
             <NFTDisplay />
           </div>
-
-          {/* <Hero /> */}
+          <Hero />
         </section>
 
         <section className={style.desktopDisplaySection}>
-          {/* <NFTDisplay /> */}
+          <NFTDisplay />
         </section>
       </div>
     </div>

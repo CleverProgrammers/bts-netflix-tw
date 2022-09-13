@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import axios from '../../axios'
-import style from '../../styles/Row.module.css'
+import style from '../../styles/home/Row.module.css'
 import YouTube from 'react-youtube'
 import movieTrailer from 'movie-trailer'
 

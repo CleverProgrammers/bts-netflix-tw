@@ -3,11 +3,22 @@
   background-size: 400% 400%;
   animation: change 5s ease-in-out infinite;
   position: relative;
-
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   flex: 1;
   border-radius: 10rem;
+  gap: 0.2rem;
+  overflow: scroll;
+  padding: 1rem;
 }
 
-/* lg:flex-col inset-0 flex snap-x items-center gap-4 overflow-x-scroll px-[1rem] py-[1rem] */
+@media (min-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}

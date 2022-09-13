@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import style from '../../styles/GateHeader.module.css'
+import style from '../../styles/gate/Header.module.css'
 
 const Logo = () => {
   return (

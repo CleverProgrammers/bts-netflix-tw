@@ -1,4 +1,4 @@
-import style from '../../styles/GateHeader.module.css'
+import style from '../../styles/gate/Header.module.css'
 import Logo from './Logo'
 
 const Header = () => {

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useAddress } from '@thirdweb-dev/react'
-import style from '../styles/Home.module.css'
+import style from '../styles/home/Home.module.css'
 import Login from '../components/home/Login'
 import Main from '../components/home/Main'
 
