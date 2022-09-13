@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useAddress } from '@thirdweb-dev/react'
-import style from '../styles/Header.module.css'
-import logo from '../assets/logo.png'
+import style from '../../styles/Header.module.css'
 
 const Header = () => {
   const [showHeaderBg, setHeaderBg] = useState(false)

@@ -3,11 +3,11 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useAddress } from '@thirdweb-dev/react'
 import style from '../styles/Home.module.css'
-import Login from '../components/Login'
-import Main from '../components/Main'
+import Login from '../components/home/Login'
+import Main from '../components/home/Main'
 
 const Home = () => {
-  const hasNft = true
+  const hasNft = false
   const router = useRouter()
   const userWalletAddress = useAddress()
 

@@ -1,0 +1,13 @@
+.wrapper {
+  background: linear-gradient(-45deg, #0242a5, #c904f1, #fe3137);
+  background-size: 400% 400%;
+  animation: change 5s ease-in-out infinite;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border-radius: 10rem;
+}
+
+/* lg:flex-col inset-0 flex snap-x items-center gap-4 overflow-x-scroll px-[1rem] py-[1rem] */

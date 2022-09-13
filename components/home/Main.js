@@ -1,7 +1,7 @@
 import Header from './Header'
 import Hero from './Hero'
 import Row from './Row'
-import requests from '../requests'
+import requests from '../../requests'
 
 const Main = () => {
   return (

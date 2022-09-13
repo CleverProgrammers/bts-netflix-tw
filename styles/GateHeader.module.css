@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navItem {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 99rem;
+  padding: 0.2rem;
+}
+
+.logoWrapper {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+
+/*
+
+navItem:
+'cursor-pointer hover:text-[#1D1D1D] hover:bg-[#F2F2F2]  ',
+
+
+const styles = {
+  wrapper: 'flex items-center space-x-10',
+  menuBox: 'relative inline-block text-left',
+  menuButton:
+    'flex items-center rounded-full  text-white hover:text-gray-200 focus:outline-none',
+  menuIcon: 'h-5 w-5',
+  menuItems:
+    'absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none',
+  menuItemsContainer: 'py-1',
+  menuItem: 'block w-full px-4 py-2 text-left text-sm',
+  buttonActive: 'bg-gray-100 text-gray-900',
+  buttonInactive: 'text-gray-700',
+} */
