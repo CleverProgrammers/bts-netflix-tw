@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import style from '../../styles/gate/Header.module.css'
+import style from '../../styles/gate/Logo.module.css'
 
 const Logo = () => {
   return (
-    <div className={style.logoWrapper}>
+    <div className={style.wrapper}>
       <Image src='/logo.png' layout='fill' alt='Netflix' />
     </div>
   )

@@ -7,11 +7,11 @@ const Header = () => {
       <Logo />
 
       <div className={style.container}>
-        <ul className={style.navBar}>
-          <li className={style.navItem}>Products</li>
-          <li className={style.navItem}>Marketplace</li>
-          <li className={style.navItem}>Gallery</li>
-        </ul>
+        <div className={style.navBar}>
+          <div className={style.navItem}>Products</div>
+          <div className={style.navItem}>Marketplace</div>
+          <div className={style.navItem}>Gallery</div>
+        </div>
       </div>
     </header>
   )

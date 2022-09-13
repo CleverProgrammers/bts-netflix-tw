@@ -36,12 +36,3 @@ const Gate = () => {
 }
 
 export default Gate
-
-const styles = {
-  wrapper: 'flex h-[100vh] w-[100vw] bg-[#1d1d1d] text-gray-200',
-  container:
-    'flex flex-col lg:flex-row flex-1 p-5 pb-20 lg:p-10 space-y-10 lg:space-y-0',
-  infoSection: 'lg:w-2/3 px-10',
-  mobileDisplaySection: 'h-[300px] flex w-full lg:hidden lg:w-1/3 mt-4',
-  desktopDisplaySection: 'hidden lg:flex flex-1 lg:w-1/3',
-}
