@@ -1,23 +1,23 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { useAddress, useMetamask } from '@thirdweb-dev/react'
+import { useAddress } from '@thirdweb-dev/react'
 import style from '../styles/Header.module.css'
 import logo from '../assets/logo.png'
-import avatar from '../assets/avatar.png'
 
 const Header = () => {
   const [showHeaderBg, setHeaderBg] = useState(false)
 
-  const connectWithMetamask = useMetamask()
-  const address = useAddress()
+  const userWalletAddress = useAddress()
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
+        setHeaderBg(true)
       } else {
         setHeaderBg(false)
       }
     })
+
     return () => {
       window.removeEventListener('scroll', null)
     }
@@ -29,25 +29,21 @@ const Header = () => {
     >
       <div className={style.logoContainer}>
         <Image
-          className={style.nav__logo}
+          className={style.image}
           src={logo}
           layout='fill'
           alt='Netflix Logo'
         />
       </div>
-      {address ? (
+
+      <div className={style.profileImageContainer}>
         <Image
-          className={style.nav__avatar}
-          width={50}
-          height={50}
-          src={avatar}
-          alt={address}
+          className={`${style.image} ${style.profileImage}`}
+          layout='fill'
+          src={`https://avatars.dicebear.com/api/identicon/${userWalletAddress}.svg`}
+          alt='User Image'
         />
-      ) : (
-        <button className={style.loginButton} onClick={connectWithMetamask}>
-          Connect MetaMask
-        </button>
-      )}
+      </div>
     </div>
   )
 }
