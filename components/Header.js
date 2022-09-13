@@ -27,13 +27,14 @@ const Header = () => {
     <div
       className={showHeaderBg ? `${style.header} ${style.black}` : style.header}
     >
-      <Image
-        className={style.nav__logo}
-        src={logo}
-        width={100}
-        height={30}
-        alt='Netflix Logo'
-      />
+      <div className={style.logoContainer}>
+        <Image
+          className={style.nav__logo}
+          src={logo}
+          layout='fill'
+          alt='Netflix Logo'
+        />
+      </div>
       {address ? (
         <Image
           className={style.nav__avatar}

@@ -13,6 +13,12 @@
   padding-right: 3rem;
 }
 
+.logoContainer {
+  position: relative;
+  height: 2rem;
+  width: 6.8rem;
+}
+
 .logo {
   width: 5rem;
   height: 2rem;
@@ -29,8 +35,8 @@
 
 .black {
   background-color: #111;
-  padding: 14px 30px;
-  padding-right: 50px;
+  padding: 1rem 2rem;
+  padding-right: 3rem;
 }
 
 .loginButton {

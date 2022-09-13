@@ -34,9 +34,10 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       movieTrailer(movie?.name || '')
         .then(url => {
           const urlParams = new URLSearchParams(new URL(url).search)
+
           setTrailerUrl(urlParams.get('v'))
         })
-        .catch(err => console.log(err))
+        .catch(error => console.error(error.message))
     }
   }
 
@@ -57,7 +58,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
               }")`,
               backgroundSize: isLargeRow ? 'cover' : 'contain',
               backgroundPosition: 'center',
-              marginTop: isLargeRow ? '0' : '-50px',
+              marginTop: isLargeRow ? '0' : '-3rem',
             }}
           />
         ))}
