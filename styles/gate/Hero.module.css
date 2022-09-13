@@ -1,40 +1,53 @@
-.heroWrapper {
+.wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 1rem;
+  padding-top: 1.4rem;
+  color: #eee;
 }
 
-.heroTitle {
-  font-size: 2rem;
+.container {
+  gap: 0.8rem;
+}
+
+.title {
+  font-size: 5rem;
   font-weight: 800;
 }
 
-.heroCta {
+@media (min-width: 1280px) {
+  .title {
+    padding-right: 2.6rem;
+  }
+
+  .description {
+    padding-right: 2.6rem;
+  }
+}
+
+.ctaContainer {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
 }
 
-.mintButton {
-  border: 1px solid gray;
-  border-radius: 2rem;
+.cta {
+  border-radius: 0.6rem;
+  border: 1px solid #eee;
   background: none;
-  padding: 0.6rem;
+  color: #eee;
+  padding: 0.8rem 1.6rem;
   font-weight: 600;
-  color: gray;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.mintButton:hover {
-  background-color: #353534;
+.cta:hover {
+  background: #eee;
   color: #1d1d1d;
 }
 
-@media (min-width: 1024px) {
-  .heroWrapper {
-    padding-top: 1.2rem;
-  }
-}
+/* const styles = {
+  cta:
+ transition-all hover:bg-gray-100 hover:text-[#1d1d1d]',
+    ' */

@@ -3,3 +3,7 @@
   width: 5rem;
   position: relative;
 }
+
+.logoImage {
+  object-fit: contain;
+}
