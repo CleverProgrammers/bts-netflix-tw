@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import style from '../../styles/gate/Hero.module.css'
+import { useAppContext } from '../../context/context'
 
 const Hero = () => {
   const nftData = []
+  const { mintNft } = useAppContext()
 
   return (
     <div className={style.heroWrapper}>
@@ -15,7 +17,9 @@ const Hero = () => {
       </p>
       <div className={style.heroCta}>
         <Link href='/?mint=1'>
-          <button className={style.mintButton}>Mint Your NFT 0.1 ETH</button>
+          <button onClick={mintNft} className={style.mintButton}>
+            Mint Your NFT 0.1 ETH
+          </button>
         </Link>
         {!!nftData.length && <p>{nftData.length} minted already</p>}
       </div>
