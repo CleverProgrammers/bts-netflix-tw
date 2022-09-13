@@ -1,0 +1,47 @@
+.header {
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2rem;
+  padding-right: 3rem;
+}
+
+.logo {
+  width: 5rem;
+  height: 2rem;
+  object-fit: contain;
+  left: 1.2rem;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 99rem;
+  object-fit: contain;
+}
+
+.black {
+  background-color: #111;
+  padding: 14px 30px;
+  padding-right: 50px;
+}
+
+.loginButton {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.2rem;
+  border-radius: 0.4rem;
+  width: 100%;
+  max-width: 18rem;
+  margin: 0.2rem auto;
+  transition: 0.3s linear;
+  cursor: pointer;
+}

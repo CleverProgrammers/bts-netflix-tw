@@ -1,32 +1,19 @@
 .loginPage {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginContaner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 20px;
-}
-
-.loginButton {
-    background: red;
-    color: #fff;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 6px;
-    width: 100%;
-    max-width: 300px;
-    margin: 5px auto;
-    transition: .3s linear;
-    cursor: pointer;
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1.2rem;
 }
 
 .loginButton:active {
-    transform: scale(.9);
+  transform: scale(0.9);
 }
