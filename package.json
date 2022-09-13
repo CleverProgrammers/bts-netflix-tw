@@ -1,0 +1,26 @@
+{
+  "name": "bts-netflix-clone-blockchain",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@thirdweb-dev/react": "^2.3.11",
+    "@thirdweb-dev/sdk": "^2.2.19",
+    "axios": "^0.27.2",
+    "ethers": "^5.6.8",
+    "movie-trailer": "^2.1.0",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-youtube": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6"
+  }
+}
