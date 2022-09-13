@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 import { ThirdwebSDK } from '@thirdweb-dev/sdk'
 import { createSdk } from '../utils/createSdk'
-import { useAccount, useEditionDrop } from '@thirdweb-dev/react'
+import { useAddress, useEditionDrop } from '@thirdweb-dev/react'
 
 const AppContext = createContext()
 
@@ -9,11 +9,10 @@ export const AppProvider = ({ children }) => {
   const [userAddress, setUserAddress] = useState('')
   const [sdk, setSdk] = useState(null)
   const [contract, setContract] = useState(null)
-  const { account } = useAccount()
+  const address = useAddress()
   useEffect(() => {
-    if (account) {
-      setUserAddress(account)
-    }
+    setUserAddress(address)
+
     const { ethereum } = window
     if (ethereum) {
       const sdk = createSdk()
@@ -23,16 +22,24 @@ export const AppProvider = ({ children }) => {
       )
       setContract(contract)
     }
-  }, [account])
+    console.log(userAddress)
+  }, [address])
+
+  useEffect(() => {
+    checkBalance()
+  }, [contract])
 
   const mintNft = async () => {
-    const claimConditions = [
-      {
-        startTime: Date.now(),
-        price: 0.1,
-      },
-    ]
     await contract.claim(2, 1)
+  }
+
+  const checkBalance = async () => {
+    if (contract) {
+      const balance = await contract.balanceOf(userAddress, 2)
+      console.log(balance.toString())
+
+      // if(balance.toString() === '1') redirect to home page
+    }
   }
 
   return (

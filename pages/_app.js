@@ -4,9 +4,7 @@ import { AppProvider } from '../context/context'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <ThirdwebProvider
-      chainRpc={{ [ChainId.Goerli]: 'https://mainnet.infura.io/v3' }}
-    >
+    <ThirdwebProvider desiredChainId={ChainId.Goerli}>
       <AppProvider>
         <Component {...pageProps} />
       </AppProvider>
