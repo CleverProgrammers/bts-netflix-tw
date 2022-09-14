@@ -22,8 +22,23 @@
   border-radius: 1rem;
   padding: 1rem 0.4rem;
   color: #eee;
+  position: relative;
 }
 
-.navItem:hover {
-  text-decoration: underline;
+.navItem:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #eee;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.navItem:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

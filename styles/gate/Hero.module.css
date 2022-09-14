@@ -2,9 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding-top: 1.4rem;
-  color: #eee;
+  width: calc(100%-1.4rem);
+  padding: 1.4rem;
 }
 
 .container {
@@ -14,6 +13,12 @@
 .title {
   font-size: 5rem;
   font-weight: 800;
+  color: #eee;
+}
+
+.description {
+  color: #eee;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 1280px) {
@@ -46,8 +51,3 @@
   background: #eee;
   color: #1d1d1d;
 }
-
-/* const styles = {
-  cta:
- transition-all hover:bg-gray-100 hover:text-[#1d1d1d]',
-    ' */

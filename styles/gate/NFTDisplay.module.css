@@ -2,23 +2,39 @@
   background: linear-gradient(-45deg, #0242a5, #c904f1, #fe3137);
   background-size: 400% 400%;
   animation: change 5s ease-in-out infinite;
-  position: relative;
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  flex: 1;
+  border-radius: 1.6rem;
   display: flex;
   align-items: center;
-  flex: 1;
-  border-radius: 10rem;
+  position: relative;
   gap: 0.2rem;
   overflow: scroll;
   padding: 1rem;
+  margin: 2rem;
 }
 
 @media (min-width: 1024px) {
   .wrapper {
     flex-direction: column;
   }
+}
+
+.imageContainer {
+  height: 12.6rem;
+  width: 12.6rem;
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .imageContainer {
+    height: 25rem;
+    width: 25rem;
+  }
+}
+
+.nftImage {
+  border-radius: 2rem;
+  object-fit: cover;
 }

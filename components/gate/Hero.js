@@ -2,17 +2,18 @@ import Link from 'next/link'
 import style from '../../styles/gate/Hero.module.css'
 
 const Hero = () => {
-  const nftData = []
+  const nftData = [{}]
 
   return (
     <main className={style.wrapper}>
       <div className={style.container}>
         <h1 className={style.title}>Netflix</h1>
         <p className={style.description}>
-          A collection of 10,000 utility-enabled PFPs that feature a richly
-          diverse and unique pool of rarity-powered traits. What's more, each
-          Moonbird unlocks private club membership and additional benefits the
-          longer you hold them. We call it nesting – because, obviously.
+          Netflix is a subscription-based streaming service that allows our
+          members to watch TV shows and movies without commercials on an
+          internet-connected device. You can also download TV shows and movies
+          to your iOS, Android, or Windows 10 device and watch without an
+          internet connection.
         </p>
         <div className={style.ctaContainer}>
           <Link href='/?mint=1'>
