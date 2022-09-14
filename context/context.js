@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
   const [contract, setContract] = useState(null)
   const [nftMetadata, setNftMetadata] = useState(null)
   const address = useAddress()
-  console.log(nftMetadata, '🔥')
+
   useEffect(() => {
     setUserAddress(address)
 
@@ -22,7 +22,6 @@ export const AppProvider = ({ children }) => {
       )
       setContract(contract)
     }
-    console.log(userAddress)
   }, [address])
 
   useEffect(() => {
@@ -37,9 +36,6 @@ export const AppProvider = ({ children }) => {
   const checkBalance = async () => {
     if (contract) {
       const balance = await contract.balanceOf(userAddress, 2)
-      console.log(balance.toString())
-
-      // if(balance.toString() === '1') redirect to home page
     }
   }
 
