@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import style from '../../styles/gate/Hero.module.css'
+import { useAppContext } from '../../context/context'
 
 const Hero = () => {
   const nftData = [{}]
+  const { mintNft } = useAppContext()
 
   return (
     <main className={style.wrapper}>
