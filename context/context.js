@@ -30,11 +30,13 @@ export const AppProvider = ({ children }) => {
   }, [contract])
 
   const mintNft = async () => {
-    await contract.claim(2, 1)
+    if (contract && user) {
+      await contract.claim(2, 1)
+    }
   }
 
   const checkBalance = async () => {
-    if (contract) {
+    if (contract && userAddress) {
       const balance = await contract.balanceOf(userAddress, 2)
     }
   }
