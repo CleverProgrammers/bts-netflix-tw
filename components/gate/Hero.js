@@ -32,7 +32,7 @@ const Hero = () => {
               Mint Your NFT 0.1 ETH
             </button>
           </Link>
-          {!!nftData.length && <p>{nftData.length} minted already</p>}
+          {!!userOwned && <p>{nftData.length} minted already</p>}
         </div>
       </div>
     </main>
