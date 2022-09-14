@@ -1,10 +1,19 @@
 import Link from 'next/link'
 import style from '../../styles/gate/Hero.module.css'
 import { useAppContext } from '../../context/context'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const Hero = () => {
   const nftData = [{}]
-  const { mintNft } = useAppContext()
+  const { mintNft, userOwned } = useAppContext()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (userOwned) {
+      router.push('/')
+    }
+  }, [userOwned])
 
   return (
     <main className={style.wrapper}>
@@ -19,7 +28,9 @@ const Hero = () => {
         </p>
         <div className={style.ctaContainer}>
           <Link href='/?mint=1'>
-            <button className={style.cta}>Mint Your NFT 0.1 ETH</button>
+            <button onClick={mintNft} className={style.cta}>
+              Mint Your NFT 0.1 ETH
+            </button>
           </Link>
           {!!nftData.length && <p>{nftData.length} minted already</p>}
         </div>

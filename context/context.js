@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useEffect } from 'react'
 import { ThirdwebSDK } from '@thirdweb-dev/sdk'
 import { createSdk } from '../utils/createSdk'
 import { useAddress, useEditionDrop } from '@thirdweb-dev/react'
+import { useRouter } from 'next/router'
 
 const AppContext = createContext()
 
@@ -9,7 +10,11 @@ export const AppProvider = ({ children }) => {
   const [userAddress, setUserAddress] = useState('')
   const [contract, setContract] = useState(null)
   const [nftMetadata, setNftMetadata] = useState(null)
+  const [userOwned, setUserOwned] = useState(false)
+
   const address = useAddress()
+
+  const router = useRouter()
 
   useEffect(() => {
     setUserAddress(address)
@@ -30,7 +35,7 @@ export const AppProvider = ({ children }) => {
   }, [contract])
 
   const mintNft = async () => {
-    if (contract && user) {
+    if (contract && userAddress) {
       await contract.claim(2, 1)
     }
   }
@@ -38,6 +43,10 @@ export const AppProvider = ({ children }) => {
   const checkBalance = async () => {
     if (contract && userAddress) {
       const balance = await contract.balanceOf(userAddress, 2)
+      console.log(balance.toString())
+      if (balance.toString() > 0) {
+        setUserOwned(true)
+      }
     }
   }
 
@@ -49,7 +58,9 @@ export const AppProvider = ({ children }) => {
   }
 
   return (
-    <AppContext.Provider value={{ mintNft }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ mintNft, userOwned }}>
+      {children}
+    </AppContext.Provider>
   )
 }
 
