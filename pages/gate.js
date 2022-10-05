@@ -4,16 +4,18 @@ import Header from '../components/gate/Header'
 import Hero from '../components/gate/Hero'
 import NFTDisplay from '../components/gate/NFTDisplay'
 import style from '../styles/gate/Gate.module.css'
+import { useAppContext } from '../context/context'
 
 const Gate = () => {
-  const hasNft = false
   const router = useRouter()
+  const { userAddress } = useAppContext()
+  const userHasNft = false
 
   useEffect(() => {
-    if (hasNft) {
+    if (userHasNft || !userAddress) {
       router.push('/')
     }
-  }, [hasNft])
+  }, [userHasNft])
 
   return (
     <div className={style.wrapper}>

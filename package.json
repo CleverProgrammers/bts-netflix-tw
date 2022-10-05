@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@thirdweb-dev/react": "^2.3.11",
-    "@thirdweb-dev/sdk": "^2.4.9",
+    "@thirdweb-dev/react": "^3.1.2",
+    "@thirdweb-dev/sdk": "^3.1.2",
     "axios": "^0.27.2",
     "ethers": "^5.7.0",
     "movie-trailer": "^2.1.0",

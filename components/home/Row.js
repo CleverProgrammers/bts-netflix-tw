@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import axios from '../../axios'
+import axios from '../../utils/axios'
 import style from '../../styles/home/Row.module.css'
 import YouTube from 'react-youtube'
 import movieTrailer from 'movie-trailer'
@@ -12,7 +12,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [trailerUrl, setTrailerUrl] = useState('')
 
   useEffect(() => {
-    const fetchMovies = (async () => {
+    ;(async () => {
       const request = await axios.get(fetchUrl)
 
       setMovies(request.data.results)

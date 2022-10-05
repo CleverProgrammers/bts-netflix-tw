@@ -19,6 +19,25 @@
   width: 6.8rem;
 }
 
+.space {
+  flex: 1;
+}
+
+.cancel {
+  margin-right: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.cancel:hover {
+  color: #111111;
+  background-color: #eee;
+}
+
 .profileImageContainer {
   position: relative;
   height: 2.4rem;
