@@ -1,10 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react'
-import { useAddress, useEditionDrop } from '@thirdweb-dev/react'
-
-let ethereum
-if (typeof window !== 'undefined') {
-  ethereum = window.ethereum
-}
+import { useAddress } from '@thirdweb-dev/react'
+import { createSdk } from '../utils/createSdk'
 
 const AppContext = createContext()
 
@@ -14,15 +10,21 @@ export const AppProvider = ({ children }) => {
   const [userHasNft, setUserHasNft] = useState(false)
 
   const address = useAddress()
-  const contract = useEditionDrop(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS)
 
   useEffect(() => {
     setUserAddress(address)
+    const { ethereum } = window
 
-    if (!ethereum || !contract) return
+    if (!ethereum) return
+    ;(async () => {
+      const sdk = createSdk()
+      const contract = await sdk.getEditionDrop(
+        process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
+      )
 
-    setContractInstance(contract)
-  }, [address, contract])
+      setContractInstance(contract)
+    })()
+  }, [address])
 
   useEffect(() => {
     checkBalance()
@@ -31,7 +33,7 @@ export const AppProvider = ({ children }) => {
   const claimNft = async () => {
     if (!(contractInstance && userAddress)) return
 
-    await contractInstance.claimTo(userAddress, 0, 1)
+    await contractInstance.claim(0, 1)
   }
 
   const checkBalance = async () => {

@@ -10,12 +10,6 @@ const MyApp = ({ Component, pageProps }) => {
       </AppProvider>
     </ThirdwebProvider>
   )
-
-  // return (
-  //   <AppProvider>
-  //     <Component {...pageProps} />
-  //   </AppProvider>
-  // )
 }
 
 export default MyApp
